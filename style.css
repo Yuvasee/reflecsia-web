@@ -136,6 +136,26 @@ ul li::marker {
   margin: 0;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 24px;
+  font-size: 14px;
+}
+th, td {
+  padding: 10px 14px;
+  border: 1px solid #333;
+  text-align: left;
+}
+th {
+  background: #16213e;
+  color: #fff;
+  font-weight: 600;
+}
+td {
+  color: #ccc;
+}
+
 footer {
   border-top: 1px solid #333;
   padding: 24px;
