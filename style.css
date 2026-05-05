@@ -180,7 +180,13 @@ a { color: inherit; }
   align-items: center;
 }
 .rf-hero-copy { max-width: 580px; }
-.rf-hero-wave { margin: 8px 0 28px; opacity: 0.85; max-width: 520px; height: 36px; }
+.rf-hero-wave { margin: 8px 0 20px; opacity: 0.85; max-width: 520px; height: 36px; }
+.rf-hero-tag {
+  font-size: 17px; font-style: italic; color: var(--cyan);
+  letter-spacing: -0.005em;
+  margin: 0 0 12px;
+  opacity: 0.92;
+}
 .rf-hero-sub {
   font-size: 19px; line-height: 1.5; color: var(--body);
   margin: 0 0 32px; max-width: 540px;
