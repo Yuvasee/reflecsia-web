@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reflecsia — голосовой дневник с ИИ-инсайтами</title>
+  <meta name="description" content="Говорите 30 секунд или 10 минут. Reflecsia расшифрует, найдёт паттерны и покажет, какой была ваша неделя на самом деле."/>
+  <link rel="canonical" href="https://reflecsia.app/ru.html"/>
+  <link rel="alternate" hreflang="en" href="https://reflecsia.app/"/>
+  <link rel="alternate" hreflang="ru" href="https://reflecsia.app/ru.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://reflecsia.app/"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Reflecsia — голосовой дневник с ИИ-инсайтами"/>
+  <meta property="og:description" content="Говорите 30 секунд или 10 минут. Reflecsia расшифрует, найдёт паттерны и покажет, какой была ваша неделя на самом деле."/>
+  <meta property="og:url" content="https://reflecsia.app/ru.html"/>
+  <meta property="og:image" content="https://reflecsia.app/og-image-ru.png"/>
+  <meta property="og:locale" content="ru_RU"/>
+  <meta property="og:locale:alternate" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Reflecsia — голосовой дневник с ИИ-инсайтами"/>
+  <meta name="twitter:description" content="Говорите 30 секунд или 10 минут. Reflecsia расшифрует, найдёт паттерны и покажет, какой была ваша неделя на самом деле."/>
+  <meta name="twitter:image" content="https://reflecsia.app/og-image-ru.png"/>
+
+  <link rel="icon" type="image/png" href="icon.png"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Reflecsia",
+    "operatingSystem": "ANDROID, iOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "Голосовой дневник с ИИ-инсайтами. Говорите 30 секунд или 10 минут — Reflecsia расшифрует, найдёт паттерны и покажет, какой была ваша неделя на самом деле.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Yuri Vasilchikov", "email": "yuri.v9v@gmail.com" },
+    "url": "https://reflecsia.app/ru.html",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.yuvasee.mneme"
+  }
+  </script>
+</head>
+<body>
+<div class="rf-page">
+
+  <nav class="rf-nav">
+    <a class="rf-wordmark" href="#top" aria-label="Reflecsia — на главную">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <radialGradient id="orbFill" cx="38%" cy="34%" r="70%">
+            <stop offset="0%" stop-color="#a4b8ff" stop-opacity="0.95"/>
+            <stop offset="55%" stop-color="#6366f1" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#1e1b4b" stop-opacity="1"/>
+          </radialGradient>
+          <radialGradient id="orbHilite" cx="35%" cy="32%" r="22%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="orbGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="1.4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <circle cx="32" cy="32" r="26" fill="url(#orbFill)"/>
+        <g stroke="#56e0ff" fill="none" stroke-linecap="round" filter="url(#orbGlow)">
+          <ellipse cx="32" cy="20" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+          <ellipse cx="32" cy="26" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+          <ellipse cx="32" cy="32" rx="26" ry="6.0" stroke-opacity="1"    stroke-width="1.6"/>
+          <ellipse cx="32" cy="38" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+          <ellipse cx="32" cy="44" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+        </g>
+        <circle cx="22" cy="20" r="9" fill="url(#orbHilite)"/>
+      </svg>
+      <span class="rf-wordmark-text">reflecsia</span>
+    </a>
+    <div class="rf-nav-links">
+      <a href="#privacy">Конфиденциальность</a>
+      <a href="#faq">FAQ</a>
+      <a href="press.html">Пресс</a>
+      <span class="rf-nav-sep" aria-hidden="true"></span>
+      <a class="rf-lang" href="/">EN</a>
+      <span class="rf-nav-bullet" aria-hidden="true">·</span>
+      <a class="rf-lang is-active" href="ru.html" aria-current="page">RU</a>
+    </div>
+  </nav>
+
+  <section class="rf-hero" id="top">
+    <div class="rf-hero-glow-wrap" aria-hidden="true">
+      <div class="rf-hero-glow"></div>
+    </div>
+
+    <div class="rf-hero-grid">
+      <div class="rf-hero-copy">
+        <span class="rf-pill"><span class="rf-pill-dot"></span>Голосовой дневник, который слушает</span>
+
+        <h1 class="rf-h1">
+          <span class="rf-h1-a">Голосовой дневник,</span>
+          <span class="rf-h1-b">который вас понимает.</span>
+        </h1>
+
+        <div class="rf-hero-wave" aria-hidden="true">
+          <svg id="rf-wave" width="100%" height="100%"></svg>
+        </div>
+
+        <p class="rf-hero-sub">Говорите 30 секунд или 10 минут. Reflecsia расшифрует, найдёт паттерны и покажет, какой была ваша неделя на самом деле.</p>
+
+        <div class="rf-hero-ctas">
+          <a class="rf-badge" href="https://play.google.com/store/apps/details?id=com.yuvasee.mneme" target="_blank" rel="noreferrer noopener">
+            <span class="rf-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 3.5L19.5 12L5 20.5V3.5Z" fill="#56e0ff"/>
+              </svg>
+            </span>
+            <span class="rf-badge-text">
+              <span class="rf-badge-kicker">Скачать в</span>
+              <span class="rf-badge-label">Google Play</span>
+            </span>
+          </a>
+          <a class="rf-badge" href="https://testflight.apple.com/join/HPkrdms6" target="_blank" rel="noreferrer noopener">
+            <span class="rf-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true">
+                <path d="M16.7 12.4c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.5 1.3 9.9.8 1.2 1.8 2.6 3.1 2.5 1.2-.05 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.5.95-1.4 1.35-2.8 1.4-2.9-.03-.01-2.7-1-2.7-4z M14.4 4.9c.7-.85 1.2-2 1.05-3.15-1 .04-2.2.7-2.95 1.5-.65.7-1.25 1.85-1.1 3 1.1.05 2.3-.55 3-1.35z"/>
+              </svg>
+            </span>
+            <span class="rf-badge-text">
+              <span class="rf-badge-kicker">Скачать в</span>
+              <span class="rf-badge-label">App Store</span>
+            </span>
+          </a>
+        </div>
+        <div class="rf-hero-micro">Бесплатно — 10 записей в месяц. Карта не нужна.</div>
+      </div>
+
+      <div class="rf-hero-phone">
+        <div class="rf-phone-wrap rf-hero-phone-bg" aria-hidden="true">
+          <div class="rf-phone rf-phone-w240">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/ru/screen-home.png" alt=""/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rf-phone-wrap rf-hero-phone-bg-2" aria-hidden="true">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/ru/screen-entry.png" alt=""/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rf-phone rf-phone-w300">
+          <div class="rf-phone-glow" aria-hidden="true"></div>
+          <div class="rf-phone-frame">
+            <div class="rf-phone-screen">
+              <img src="assets/ru/screen-insights.png" alt="Настроение во времени"/>
+              <div class="rf-phone-notch"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rf-section rf-how" id="how">
+    <header class="rf-sec-head">
+      <span class="rf-kicker">Как это работает</span>
+      <p class="rf-sec-kicker">Три шага. Без серий, без чувства вины, без давления.</p>
+    </header>
+    <div class="rf-how-grid">
+      <article class="rf-how-card">
+        <div class="rf-how-num">01</div>
+        <h3 class="rf-h3">Говорите.</h3>
+        <p class="rf-body">Нажмите кнопку — говорите. 30 секунд или 10 минут, как удобно.</p>
+        <div class="rf-how-shot">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-glow" aria-hidden="true"></div>
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/ru/screen-recording.png" alt="Запись"/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="rf-how-card">
+        <div class="rf-how-num">02</div>
+        <h3 class="rf-h3">Читайте.</h3>
+        <p class="rf-body">Голос превращается в текст. Аудио удаляется сразу после расшифровки.</p>
+        <div class="rf-how-shot">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/ru/screen-entry.png" alt="Детали записи"/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="rf-how-card">
+        <div class="rf-how-num">03</div>
+        <h3 class="rf-h3">Замечайте.</h3>
+        <p class="rf-body">Каждая запись — это эмоции, темы, паттерны. Сводки за неделю и месяц показывают, что меняется.</p>
+        <div class="rf-how-shot">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/ru/screen-insights.png" alt="Инсайты"/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="rf-section rf-wedge" id="wedge">
+    <div class="rf-wedge-grid">
+      <div class="rf-wedge-copy">
+        <span class="rf-kicker">Почему голос</span>
+        <p class="rf-wedge-body">Большинство дневников требуют писать. Reflecsia позволяет говорить. Люди говорят примерно в 4 раза быстрее, чем печатают, и 5-минутная голосовая запись содержит столько же, сколько 18 минут письма. Поэтому почти все дневники бросают в первую неделю — и поэтому Reflecsia не бросают.</p>
+      </div>
+      <div class="rf-wedge-stats">
+        <div class="rf-stat">
+          <div class="rf-stat-v">4×</div>
+          <div class="rf-stat-l">быстрее, чем печатать</div>
+        </div>
+        <div class="rf-stat">
+          <div class="rf-stat-v">5 мин</div>
+          <div class="rf-stat-l">голоса ≈ 18 мин письма</div>
+        </div>
+        <div class="rf-stat">
+          <div class="rf-stat-v">7-й день</div>
+          <div class="rf-stat-l">когда бросают дневник. Но не этот.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rf-section rf-ai" id="ai">
+    <div class="rf-ai-grid">
+      <div class="rf-ai-copy">
+        <span class="rf-kicker">Что именно делает ИИ</span>
+        <h2 class="rf-h2" style="white-space: pre-line;">Пять тихих операций,
+за каждой записью.</h2>
+        <ul class="rf-ai-list">
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Эмоции</div><div class="rf-ai-b">Каждая запись на колесе Плутчика + валентность / возбуждение.</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Темы</div><div class="rf-ai-b">Повторяющиеся сюжеты всплывают через записи автоматически.</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Когнитивные паттерны</div><div class="rf-ai-b">Деликатная рефлексия на основе подходов КПТ (не терапия, не диагноз).</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Вопросы для рефлексии</div><div class="rf-ai-b">Персонализированы под то, что вы действительно сказали.</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Сводки</div><div class="rf-ai-b">За день, неделю, месяц. Лонгитюдная картина.</div></div>
+          </li>
+        </ul>
+      </div>
+      <div class="rf-ai-shot">
+        <div class="rf-phone rf-phone-w300">
+          <div class="rf-phone-glow" aria-hidden="true"></div>
+          <div class="rf-phone-frame">
+            <div class="rf-phone-screen">
+              <img src="assets/ru/screen-entry.png" alt="Детали записи"/>
+              <div class="rf-phone-notch"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rf-section rf-privacy" id="privacy">
+    <div class="rf-privacy-head">
+      <span class="rf-kicker">Конфиденциальность и честность</span>
+      <p class="rf-privacy-body">Аудио удаляется сразу после расшифровки — никогда не хранится на наших серверах. Транскрипции и анализ зашифрованы; доступ только у вас (row-level security). Мы не продаём данные. Мы не обучаем ИИ на ваших записях. Вы можете в любой момент экспортировать всё в PDF / Markdown / JSON и удалить аккаунт в одно нажатие.</p>
+      <p class="rf-privacy-body rf-privacy-body-2">Reflecsia — инструмент саморефлексии, а не медицинское устройство. Он помогает замечать паттерны. Если вас беспокоит что-то серьёзное, пожалуйста, обратитесь к специалисту.</p>
+      <a class="rf-link" href="privacy.html">Полная политика конфиденциальности →</a>
+    </div>
+    <div class="rf-pillar-grid">
+      <div class="rf-pillar"><div class="rf-pillar-h">Аудио удаляется сразу</div><div class="rf-pillar-b">Не хранится на наших серверах.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Шифрование на хранении</div><div class="rf-pillar-b">Доступ — только в вашем аккаунте.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Данные не продаются</div><div class="rf-pillar-b">Никаких пикселей, никаких рекламодателей.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">ИИ не учится на ваших записях</div><div class="rf-pillar-b">Ваш текст не попадает ни в одну модель.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Экспорт в любой момент</div><div class="rf-pillar-b">PDF, Markdown или JSON.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Удаление в одно нажатие</div><div class="rf-pillar-b">Аккаунт и все данные — стираются.</div></div>
+    </div>
+  </section>
+
+  <section class="rf-section rf-faq" id="faq">
+    <header class="rf-sec-head rf-sec-head-left">
+      <span class="rf-kicker">Вопросы</span>
+    </header>
+    <div class="rf-faq-list">
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="true"><span>Безопасно ли моё аудио?</span><span class="rf-faq-icon" aria-hidden="true">−</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Да. Аудио удаляется сразу после расшифровки — мы никогда не храним его на серверах. В вашем аккаунте остаются только текст и анализ, зашифрованные на хранении.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>Обучаете ли вы ИИ на моих записях?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Нет. Ваши транскрипты и размышления никогда не используются для обучения моделей — ни наших, ни чужих. Они существуют только чтобы возвращать инсайты вам.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>Сколько это стоит?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Бесплатно — 10 записей в месяц, без карты. Месячная подписка снимает лимит и открывает развёрнутые сводки. Отменить можно в любой момент.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>На каких языках работает?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Запись, расшифровка и анализ сегодня работают на русском и английском, другие языки на подходе. Интерфейс приложения следует языку вашего телефона.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>А если я хочу только записывать, без ИИ?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Можно. Анализ ИИ можно отключить для конкретной записи или глобально — Reflecsia станет чистым голосовым дневником, который вы ведёте для себя.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>iOS?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Да — уже доступно. Запуск в App Store свежий, пока через TestFlight, пока публичный листинг проходит ревью. Те же функции и приватность, что и на Android.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rf-section rf-closer">
+    <div class="rf-closer-glow" aria-hidden="true"></div>
+    <h2 class="rf-h2 rf-closer-h">Пять минут сегодня вечером.
+Паттерн — к воскресенью.</h2>
+    <p class="rf-closer-sub">Бесплатно — 10 записей в месяц. Карта не нужна.</p>
+    <div class="rf-hero-ctas">
+      <a class="rf-badge" href="https://play.google.com/store/apps/details?id=com.yuvasee.mneme" target="_blank" rel="noreferrer noopener">
+        <span class="rf-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3.5L19.5 12L5 20.5V3.5Z" fill="#56e0ff"/></svg>
+        </span>
+        <span class="rf-badge-text">
+          <span class="rf-badge-kicker">Скачать в</span>
+          <span class="rf-badge-label">Google Play</span>
+        </span>
+      </a>
+      <a class="rf-badge" href="https://testflight.apple.com/join/HPkrdms6" target="_blank" rel="noreferrer noopener">
+        <span class="rf-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true"><path d="M16.7 12.4c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.5 1.3 9.9.8 1.2 1.8 2.6 3.1 2.5 1.2-.05 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.5.95-1.4 1.35-2.8 1.4-2.9-.03-.01-2.7-1-2.7-4z M14.4 4.9c.7-.85 1.2-2 1.05-3.15-1 .04-2.2.7-2.95 1.5-.65.7-1.25 1.85-1.1 3 1.1.05 2.3-.55 3-1.35z"/></svg>
+        </span>
+        <span class="rf-badge-text">
+          <span class="rf-badge-kicker">Скачать в</span>
+          <span class="rf-badge-label">App Store</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="rf-footer">
+    <div class="rf-footer-top">
+      <a class="rf-wordmark" href="#top">
+        <svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="26" fill="url(#orbFill)"/>
+          <g stroke="#56e0ff" fill="none" stroke-linecap="round">
+            <ellipse cx="32" cy="20" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+            <ellipse cx="32" cy="26" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+            <ellipse cx="32" cy="32" rx="26" ry="6.0" stroke-opacity="1"    stroke-width="1.6"/>
+            <ellipse cx="32" cy="38" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+            <ellipse cx="32" cy="44" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+          </g>
+        </svg>
+        <span class="rf-wordmark-text" style="font-size:16px;">reflecsia</span>
+      </a>
+      <span class="rf-footer-tagline">— Голосовой дневник с ИИ-инсайтами</span>
+    </div>
+    <div class="rf-footer-mid">
+      <div>© 2026 Reflecsia</div>
+      <div>связь: <a href="mailto:yuri.v9v@gmail.com" style="color:inherit;">yuri.v9v@gmail.com</a></div>
+    </div>
+    <div class="rf-footer-links">
+      <a href="privacy.html">Конфиденциальность</a>
+      <a href="terms.html">Условия</a>
+      <a href="delete.html">Удаление аккаунта</a>
+      <a href="press.html">Пресс</a>
+      <span class="rf-nav-sep" aria-hidden="true"></span>
+      <a class="rf-lang" href="/">EN</a>
+      <span class="rf-nav-bullet" aria-hidden="true">·</span>
+      <a class="rf-lang is-active" href="ru.html" aria-current="page">RU</a>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

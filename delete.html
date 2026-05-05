@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Delete Account — Reflecsia</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://reflecsia.app/delete.html"/>
+  <link rel="icon" type="image/png" href="icon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav>
-    <div class="inner">
-      <a class="logo" href="/">Reflecsia</a>
+<div class="rf-page">
+
+  <nav class="rf-nav">
+    <a class="rf-wordmark" href="/" aria-label="Reflecsia home">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <radialGradient id="orbFill" cx="38%" cy="34%" r="70%">
+            <stop offset="0%" stop-color="#a4b8ff" stop-opacity="0.95"/>
+            <stop offset="55%" stop-color="#6366f1" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#1e1b4b" stop-opacity="1"/>
+          </radialGradient>
+          <radialGradient id="orbHilite" cx="35%" cy="32%" r="22%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="26" fill="url(#orbFill)"/>
+        <g stroke="#56e0ff" fill="none" stroke-linecap="round">
+          <ellipse cx="32" cy="20" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+          <ellipse cx="32" cy="26" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+          <ellipse cx="32" cy="32" rx="26" ry="6.0" stroke-opacity="1"    stroke-width="1.6"/>
+          <ellipse cx="32" cy="38" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+          <ellipse cx="32" cy="44" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+        </g>
+        <circle cx="22" cy="20" r="9" fill="url(#orbHilite)"/>
+      </svg>
+      <span class="rf-wordmark-text">reflecsia</span>
+    </a>
+    <div class="rf-nav-links">
+      <a href="/">Home</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </div>
   </nav>
 
-  <div class="container">
+  <article class="rf-legal">
     <h1>Delete Your Account</h1>
-    <p class="subtitle">Request permanent deletion of your Reflecsia account and all associated data.</p>
+    <p class="rf-subtitle">Request permanent deletion of your Reflecsia account and all associated data.</p>
 
     <h2>What gets deleted</h2>
     <ul>
@@ -29,29 +61,34 @@
     </ul>
 
     <h2>Important</h2>
-    <p>Account deletion is <strong style="color: #fff;">permanent and cannot be undone</strong>. All your data will be removed within 30 days of your request. You will not be able to recover any journal entries or insights after deletion.</p>
+    <p>Account deletion is <strong>permanent and cannot be undone</strong>. All your data will be removed within 30 days of your request. You will not be able to recover any journal entries or insights after deletion.</p>
 
     <h2>Request Deletion</h2>
     <p>Send your request to the email address below using the same email associated with your Reflecsia account:</p>
 
-    <p style="margin: 24px 0;">
-      <a href="mailto:privacy@reflecsia.app?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20Reflecsia%20account%20and%20all%20associated%20data.%0A%0AAccount%20email%3A%20%5Byour%20email%20here%5D" style="display:inline-block;padding:14px 32px;background:#dc2626;color:#fff;border-radius:8px;font-weight:600;font-size:16px;">
-        Request Account Deletion
-      </a>
+    <p style="margin: 28px 0;">
+      <a class="rf-cta-button" href="mailto:privacy@reflecsia.app?subject=Account%20Deletion%20Request&amp;body=Please%20delete%20my%20Reflecsia%20account%20and%20all%20associated%20data.%0A%0AAccount%20email%3A%20%5Byour%20email%20here%5D">Request Account Deletion</a>
     </p>
 
-    <p class="note">Or email us directly at <a href="mailto:privacy@reflecsia.app">privacy@reflecsia.app</a> with the subject "Account Deletion Request" and include the email address associated with your account.</p>
+    <p class="rf-note">Or email us directly at <a href="mailto:privacy@reflecsia.app">privacy@reflecsia.app</a> with the subject "Account Deletion Request" and include the email address associated with your account.</p>
 
-    <p class="note">We will confirm your deletion request within 48 hours and complete the process within 30 days.</p>
-  </div>
+    <p class="rf-note">We will confirm your deletion request within 48 hours and complete the process within 30 days.</p>
+  </article>
 
-  <footer>
-    <p>&copy; 2026 Reflecsia. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="delete.html">Delete Account</a>
-    </p>
+  <footer class="rf-footer">
+    <div class="rf-footer-mid">
+      <div>© 2026 Reflecsia</div>
+      <div>contact: <a href="mailto:yuri.v9v@gmail.com" style="color:inherit;">yuri.v9v@gmail.com</a></div>
+    </div>
+    <div class="rf-footer-links">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="delete.html">Account Deletion</a>
+      <a href="press.html">Press</a>
+    </div>
   </footer>
+</div>
+<script src="script.js" defer></script>
 </body>
 </html>

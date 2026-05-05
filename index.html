@@ -1,52 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reflecsia — Voice Journaling with AI Insights</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="icon.png">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reflecsia — voice journaling with AI insights</title>
+  <meta name="description" content="Talk for 30 seconds or 10 minutes. Reflecsia transcribes, finds the patterns, and shows you what your week actually felt like."/>
+  <link rel="canonical" href="https://reflecsia.app/"/>
+  <link rel="alternate" hreflang="en" href="https://reflecsia.app/"/>
+  <link rel="alternate" hreflang="ru" href="https://reflecsia.app/ru.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://reflecsia.app/"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Reflecsia — voice journaling with AI insights"/>
+  <meta property="og:description" content="Talk for 30 seconds or 10 minutes. Reflecsia transcribes, finds the patterns, and shows you what your week actually felt like."/>
+  <meta property="og:url" content="https://reflecsia.app/"/>
+  <meta property="og:image" content="https://reflecsia.app/og-image-en.png"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:locale:alternate" content="ru_RU"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Reflecsia — voice journaling with AI insights"/>
+  <meta name="twitter:description" content="Talk for 30 seconds or 10 minutes. Reflecsia transcribes, finds the patterns, and shows you what your week actually felt like."/>
+  <meta name="twitter:image" content="https://reflecsia.app/og-image-en.png"/>
+
+  <link rel="icon" type="image/png" href="icon.png"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Reflecsia",
+    "operatingSystem": "ANDROID, iOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "Voice journaling with AI insights. Talk for 30 seconds or 10 minutes; Reflecsia transcribes, finds patterns, and shows you what your week actually felt like.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Yuri Vasilchikov", "email": "yuri.v9v@gmail.com" },
+    "url": "https://reflecsia.app/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.yuvasee.mneme"
+  }
+  </script>
 </head>
 <body>
-  <nav>
-    <div class="inner">
-      <img src="icon.png" alt="Reflecsia" class="nav-icon"><span class="logo">Reflecsia</span>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+<div class="rf-page">
+
+  <!-- ───────────────── NAV ─────────────────────────────────────────── -->
+  <nav class="rf-nav">
+    <a class="rf-wordmark" href="#top" aria-label="Reflecsia home">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <radialGradient id="orbFill" cx="38%" cy="34%" r="70%">
+            <stop offset="0%" stop-color="#a4b8ff" stop-opacity="0.95"/>
+            <stop offset="55%" stop-color="#6366f1" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#1e1b4b" stop-opacity="1"/>
+          </radialGradient>
+          <radialGradient id="orbHilite" cx="35%" cy="32%" r="22%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="orbGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="1.4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <circle cx="32" cy="32" r="26" fill="url(#orbFill)"/>
+        <g stroke="#56e0ff" fill="none" stroke-linecap="round" filter="url(#orbGlow)">
+          <ellipse cx="32" cy="20" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+          <ellipse cx="32" cy="26" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+          <ellipse cx="32" cy="32" rx="26" ry="6.0" stroke-opacity="1"    stroke-width="1.6"/>
+          <ellipse cx="32" cy="38" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+          <ellipse cx="32" cy="44" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+        </g>
+        <circle cx="22" cy="20" r="9" fill="url(#orbHilite)"/>
+      </svg>
+      <span class="rf-wordmark-text">reflecsia</span>
+    </a>
+    <div class="rf-nav-links">
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="press.html">Press</a>
+      <span class="rf-nav-sep" aria-hidden="true"></span>
+      <a class="rf-lang is-active" href="/" aria-current="page">EN</a>
+      <span class="rf-nav-bullet" aria-hidden="true">·</span>
+      <a class="rf-lang" href="ru.html">RU</a>
     </div>
   </nav>
 
-  <div class="hero">
-    <img src="icon.png" alt="Reflecsia icon" class="hero-icon">
-    <h1>Reflecsia</h1>
-    <p class="subtitle">Voice journaling with AI-powered emotional insights. Speak your thoughts, understand your patterns.</p>
-    <a class="cta" href="https://play.google.com/store/apps/details?id=com.yuvasee.mneme">Get on Google Play</a>
-  </div>
+  <!-- ───────────────── HERO ───────────────────────────────────────── -->
+  <section class="rf-hero" id="top">
+    <div class="rf-hero-glow-wrap" aria-hidden="true">
+      <div class="rf-hero-glow"></div>
+    </div>
 
-  <div class="container">
-    <div class="features">
-      <div class="feature">
-        <h3>Voice Recording</h3>
-        <p>Record your thoughts naturally. Your voice is transcribed automatically.</p>
+    <div class="rf-hero-grid">
+      <div class="rf-hero-copy">
+        <span class="rf-pill"><span class="rf-pill-dot"></span>Voice journaling, paid attention to</span>
+
+        <h1 class="rf-h1">
+          <span class="rf-h1-a">Journal by voice.</span>
+          <span class="rf-h1-b">Understand by AI.</span>
+        </h1>
+
+        <div class="rf-hero-wave" aria-hidden="true">
+          <svg id="rf-wave" width="100%" height="100%"></svg>
+        </div>
+
+        <p class="rf-hero-sub">Talk for 30 seconds or 10 minutes. Reflecsia transcribes, finds the patterns, and shows you what your week actually felt like.</p>
+
+        <div class="rf-hero-ctas">
+          <a class="rf-badge" href="https://play.google.com/store/apps/details?id=com.yuvasee.mneme" target="_blank" rel="noreferrer noopener">
+            <span class="rf-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 3.5L19.5 12L5 20.5V3.5Z" fill="#56e0ff"/>
+              </svg>
+            </span>
+            <span class="rf-badge-text">
+              <span class="rf-badge-kicker">Get it on</span>
+              <span class="rf-badge-label">Google Play</span>
+            </span>
+          </a>
+          <a class="rf-badge" href="https://testflight.apple.com/join/HPkrdms6" target="_blank" rel="noreferrer noopener">
+            <span class="rf-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true">
+                <path d="M16.7 12.4c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.5 1.3 9.9.8 1.2 1.8 2.6 3.1 2.5 1.2-.05 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.5.95-1.4 1.35-2.8 1.4-2.9-.03-.01-2.7-1-2.7-4z M14.4 4.9c.7-.85 1.2-2 1.05-3.15-1 .04-2.2.7-2.95 1.5-.65.7-1.25 1.85-1.1 3 1.1.05 2.3-.55 3-1.35z"/>
+              </svg>
+            </span>
+            <span class="rf-badge-text">
+              <span class="rf-badge-kicker">Get it on</span>
+              <span class="rf-badge-label">App Store</span>
+            </span>
+          </a>
+        </div>
+        <div class="rf-hero-micro">Free for 10 entries / month. No card to start.</div>
       </div>
-      <div class="feature">
-        <h3>AI Insights</h3>
-        <p>Understand your emotional patterns with intelligent analysis.</p>
-      </div>
-      <div class="feature">
-        <h3>Private & Secure</h3>
-        <p>Your data is encrypted and never used to train AI models.</p>
+
+      <div class="rf-hero-phone">
+        <div class="rf-phone-wrap rf-hero-phone-bg" aria-hidden="true">
+          <div class="rf-phone rf-phone-w240">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/en/screen-home.png" alt=""/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rf-phone-wrap rf-hero-phone-bg-2" aria-hidden="true">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/en/screen-entry.png" alt=""/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rf-phone rf-phone-w300">
+          <div class="rf-phone-glow" aria-hidden="true"></div>
+          <div class="rf-phone-frame">
+            <div class="rf-phone-screen">
+              <img src="assets/en/screen-insights.png" alt="Mood over time"/>
+              <div class="rf-phone-notch"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 Reflecsia. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="delete.html">Delete Account</a>
-    </p>
+  <!-- ───────────────── HOW IT WORKS ───────────────────────────────── -->
+  <section class="rf-section rf-how" id="how">
+    <header class="rf-sec-head">
+      <span class="rf-kicker">How it works</span>
+      <p class="rf-sec-kicker">Three steps. No streaks, no shame, no streak-shaming.</p>
+    </header>
+    <div class="rf-how-grid">
+      <article class="rf-how-card">
+        <div class="rf-how-num">01</div>
+        <h3 class="rf-h3">Talk.</h3>
+        <p class="rf-body">Tap once, speak. 30 seconds or 10 minutes — whatever fits the moment.</p>
+        <div class="rf-how-shot">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-glow" aria-hidden="true"></div>
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/en/screen-recording.png" alt="Recording"/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="rf-how-card">
+        <div class="rf-how-num">02</div>
+        <h3 class="rf-h3">Read.</h3>
+        <p class="rf-body">Your voice becomes structured text. Audio is deleted right after.</p>
+        <div class="rf-how-shot">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/en/screen-entry.png" alt="Entry detail"/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="rf-how-card">
+        <div class="rf-how-num">03</div>
+        <h3 class="rf-h3">See.</h3>
+        <p class="rf-body">Each entry maps emotions, themes, and patterns. Weekly and monthly summaries show what’s changing.</p>
+        <div class="rf-how-shot">
+          <div class="rf-phone rf-phone-w220">
+            <div class="rf-phone-frame">
+              <div class="rf-phone-screen">
+                <img src="assets/en/screen-insights.png" alt="Insights"/>
+                <div class="rf-phone-notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ───────────────── WEDGE ──────────────────────────────────────── -->
+  <section class="rf-section rf-wedge" id="wedge">
+    <div class="rf-wedge-grid">
+      <div class="rf-wedge-copy">
+        <span class="rf-kicker">Why voice</span>
+        <p class="rf-wedge-body">Most journaling apps ask you to write. Reflecsia asks you to talk. People speak about 4× faster than they type — a 5-minute voice entry captures what would take 18 minutes to write down. That’s why most journals get abandoned in week one. And why Reflecsia doesn’t.</p>
+      </div>
+      <div class="rf-wedge-stats">
+        <div class="rf-stat">
+          <div class="rf-stat-v">4×</div>
+          <div class="rf-stat-l">faster than typing</div>
+        </div>
+        <div class="rf-stat">
+          <div class="rf-stat-v">5 min</div>
+          <div class="rf-stat-l">of voice ≈ 18 min of writing</div>
+        </div>
+        <div class="rf-stat">
+          <div class="rf-stat-v">Day 7</div>
+          <div class="rf-stat-l">when most journals stop. Not this one.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── AI SECTION ─────────────────────────────────── -->
+  <section class="rf-section rf-ai" id="ai">
+    <div class="rf-ai-grid">
+      <div class="rf-ai-copy">
+        <span class="rf-kicker">What the AI actually does</span>
+        <h2 class="rf-h2" style="white-space: pre-line;">Five quiet operations,
+running behind every entry.</h2>
+        <ul class="rf-ai-list">
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Emotions</div><div class="rf-ai-b">Every entry mapped on Plutchik’s wheel + valence / arousal.</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Themes</div><div class="rf-ai-b">Recurring topics surface across entries automatically.</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Cognitive patterns</div><div class="rf-ai-b">Gentle CBT-aware reflection (not therapy, not a diagnosis).</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Reflection prompts</div><div class="rf-ai-b">Questions personalised to what you actually said.</div></div>
+          </li>
+          <li class="rf-ai-item"><span class="rf-ai-dot" aria-hidden="true"></span>
+            <div><div class="rf-ai-h">Summaries</div><div class="rf-ai-b">Daily, weekly, monthly. The longitudinal view.</div></div>
+          </li>
+        </ul>
+      </div>
+      <div class="rf-ai-shot">
+        <div class="rf-phone rf-phone-w300">
+          <div class="rf-phone-glow" aria-hidden="true"></div>
+          <div class="rf-phone-frame">
+            <div class="rf-phone-screen">
+              <img src="assets/en/screen-entry.png" alt="Entry detail"/>
+              <div class="rf-phone-notch"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── PRIVACY ────────────────────────────────────── -->
+  <section class="rf-section rf-privacy" id="privacy">
+    <div class="rf-privacy-head">
+      <span class="rf-kicker">Privacy &amp; honesty</span>
+      <p class="rf-privacy-body">Audio is deleted right after the transcription completes — it never lives on our servers. Transcripts and analysis are encrypted at rest, scoped to your account by row-level security. We don’t sell data. We don’t train AI on your entries. You can export everything as PDF / Markdown / JSON and delete your account in one tap.</p>
+      <p class="rf-privacy-body rf-privacy-body-2">Reflecsia is a self-reflection tool, not a medical device. It helps you notice patterns. If something serious comes up, please talk to a licensed professional.</p>
+      <a class="rf-link" href="privacy.html">Read the full privacy policy →</a>
+    </div>
+    <div class="rf-pillar-grid">
+      <div class="rf-pillar"><div class="rf-pillar-h">Audio deleted on transcribe</div><div class="rf-pillar-b">Never stored on our servers.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Encrypted at rest</div><div class="rf-pillar-b">Row-level security, scoped to your account.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">No data sold</div><div class="rf-pillar-b">No tracking pixels, no third-party advertisers.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">No training on your entries</div><div class="rf-pillar-b">Your text doesn’t go into anyone’s model.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Export anytime</div><div class="rf-pillar-b">PDF, Markdown, or JSON.</div></div>
+      <div class="rf-pillar"><div class="rf-pillar-h">Delete in one tap</div><div class="rf-pillar-b">Account and all data, gone.</div></div>
+    </div>
+  </section>
+
+  <!-- ───────────────── FAQ ────────────────────────────────────────── -->
+  <section class="rf-section rf-faq" id="faq">
+    <header class="rf-sec-head rf-sec-head-left">
+      <span class="rf-kicker">Questions</span>
+    </header>
+    <div class="rf-faq-list">
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="true"><span>Is my audio safe?</span><span class="rf-faq-icon" aria-hidden="true">−</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Yes. Audio is deleted immediately after the transcription completes — we never store it on our servers. Only the resulting text and analysis live in your account, encrypted at rest.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>Do you train AI on my entries?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">No. Your transcripts and reflections are never used to train any model — ours or anyone else’s. They exist only to give insights back to you.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>What does it cost?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Free for the first 10 entries per month, no card required. A monthly plan unlocks unlimited entries and the longer-form summaries. Cancel any time.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>What languages does it work in?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Recording, transcription and AI analysis work in English and Russian today, with more languages rolling out. The app interface follows your phone’s language.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>What if I just want to record without AI?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">You can. Toggle AI analysis off per entry or globally — Reflecsia becomes a clean voice-to-text journal you keep for yourself.</div></div>
+      </div>
+      <div class="rf-faq-item">
+        <button class="rf-faq-q" aria-expanded="false"><span>iOS?</span><span class="rf-faq-icon" aria-hidden="true">+</span></button>
+        <div class="rf-faq-a-wrap"><div class="rf-faq-a">Yes — available now. The App Store launch is fresh, served via TestFlight while the public listing finishes review. Same features, same privacy guarantees as Android.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── CLOSER ─────────────────────────────────────── -->
+  <section class="rf-section rf-closer">
+    <div class="rf-closer-glow" aria-hidden="true"></div>
+    <h2 class="rf-h2 rf-closer-h">Five minutes tonight.
+A pattern by Sunday.</h2>
+    <p class="rf-closer-sub">Free for 10 entries / month. No card to start.</p>
+    <div class="rf-hero-ctas">
+      <a class="rf-badge" href="https://play.google.com/store/apps/details?id=com.yuvasee.mneme" target="_blank" rel="noreferrer noopener">
+        <span class="rf-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3.5L19.5 12L5 20.5V3.5Z" fill="#56e0ff"/></svg>
+        </span>
+        <span class="rf-badge-text">
+          <span class="rf-badge-kicker">Get it on</span>
+          <span class="rf-badge-label">Google Play</span>
+        </span>
+      </a>
+      <a class="rf-badge" href="https://testflight.apple.com/join/HPkrdms6" target="_blank" rel="noreferrer noopener">
+        <span class="rf-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true"><path d="M16.7 12.4c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.5 1.3 9.9.8 1.2 1.8 2.6 3.1 2.5 1.2-.05 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.5.95-1.4 1.35-2.8 1.4-2.9-.03-.01-2.7-1-2.7-4z M14.4 4.9c.7-.85 1.2-2 1.05-3.15-1 .04-2.2.7-2.95 1.5-.65.7-1.25 1.85-1.1 3 1.1.05 2.3-.55 3-1.35z"/></svg>
+        </span>
+        <span class="rf-badge-text">
+          <span class="rf-badge-kicker">Get it on</span>
+          <span class="rf-badge-label">App Store</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────────────── FOOTER ─────────────────────────────────────── -->
+  <footer class="rf-footer">
+    <div class="rf-footer-top">
+      <a class="rf-wordmark" href="#top">
+        <svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="26" fill="url(#orbFill)"/>
+          <g stroke="#56e0ff" fill="none" stroke-linecap="round">
+            <ellipse cx="32" cy="20" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+            <ellipse cx="32" cy="26" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+            <ellipse cx="32" cy="32" rx="26" ry="6.0" stroke-opacity="1"    stroke-width="1.6"/>
+            <ellipse cx="32" cy="38" rx="25" ry="4.6" stroke-opacity="0.85" stroke-width="1.2"/>
+            <ellipse cx="32" cy="44" rx="22" ry="3.2" stroke-opacity="0.55" stroke-width="0.9"/>
+          </g>
+        </svg>
+        <span class="rf-wordmark-text" style="font-size:16px;">reflecsia</span>
+      </a>
+      <span class="rf-footer-tagline">— Voice journaling with AI insights</span>
+    </div>
+    <div class="rf-footer-mid">
+      <div>© 2026 Reflecsia</div>
+      <div>contact: <a href="mailto:yuri.v9v@gmail.com" style="color:inherit;">yuri.v9v@gmail.com</a></div>
+    </div>
+    <div class="rf-footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="delete.html">Account Deletion</a>
+      <a href="press.html">Press</a>
+      <span class="rf-nav-sep" aria-hidden="true"></span>
+      <a class="rf-lang is-active" href="/" aria-current="page">EN</a>
+      <span class="rf-nav-bullet" aria-hidden="true">·</span>
+      <a class="rf-lang" href="ru.html">RU</a>
+    </div>
   </footer>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
