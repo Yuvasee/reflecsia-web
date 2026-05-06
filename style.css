@@ -77,6 +77,16 @@ a { color: inherit; }
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--text); text-decoration: none;
 }
+.rf-wordmark-icon {
+  width: 30px; height: 30px;
+  border-radius: 7px;
+  flex: none;
+  box-shadow: 0 0 24px rgba(99,102,241,0.30);
+}
+.rf-wordmark-icon-sm {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+}
 .rf-wordmark-text {
   font-weight: 600; font-size: 18px; letter-spacing: -0.02em; line-height: 1;
 }
@@ -288,33 +298,22 @@ a { color: inherit; }
   .rf-wave-bar { animation: none; transform: scaleY(0.85); opacity: 0.85; }
 }
 
-/* ─── Store badge ─────────────────────────────────────────────────────── */
-.rf-badge {
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 12px 18px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 14px;
-  color: #fff; text-decoration: none;
-  transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+/* ─── Store badges (official Google Play + Apple App Store) ────────────── */
+.rf-store-badge {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 180ms ease, opacity 180ms ease;
+  opacity: 0.95;
 }
-.rf-badge:hover {
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(86,224,255,0.40);
+.rf-store-badge:hover {
   transform: translateY(-1px);
+  opacity: 1;
 }
-.rf-badge-icon {
-  display: inline-flex; width: 28px; height: 28px;
-  align-items: center; justify-content: center;
+.rf-store-badge img {
+  display: block;
+  height: 50px;
+  width: auto;
 }
-.rf-badge-text {
-  display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1.15;
-}
-.rf-badge-kicker {
-  font-size: 11px; color: rgba(255,255,255,0.55);
-  letter-spacing: 0.04em; text-transform: uppercase;
-}
-.rf-badge-label { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
 
 /* ─── How it works ────────────────────────────────────────────────────── */
 .rf-how-grid {
@@ -503,7 +502,7 @@ a { color: inherit; }
 .rf-closer {
   position: relative;
   text-align: center;
-  padding-top: 100px; padding-bottom: 140px;
+  padding-top: 40px; padding-bottom: 120px;
   overflow: hidden;
 }
 .rf-closer-glow {
@@ -515,7 +514,7 @@ a { color: inherit; }
   pointer-events: none;
   z-index: 0;
 }
-.rf-closer > * { position: relative; z-index: 1; }
+.rf-closer > *:not(.rf-closer-glow) { position: relative; z-index: 1; }
 .rf-closer-h { max-width: 760px; margin: 0 auto 16px; white-space: pre-line; }
 .rf-closer-sub { color: var(--muted); margin: 0 0 32px; font-size: 16px; }
 .rf-closer .rf-hero-ctas { justify-content: center; }
