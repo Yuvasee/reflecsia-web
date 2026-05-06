@@ -312,8 +312,8 @@ a { color: inherit; }
 }
 .rf-store-badge img {
   display: block;
-  width: 160px;
-  height: auto;
+  height: 50px;
+  width: auto;
 }
 
 /* ─── How it works ────────────────────────────────────────────────────── */
