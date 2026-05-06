@@ -79,13 +79,11 @@ a { color: inherit; }
 }
 .rf-wordmark-icon {
   width: 30px; height: 30px;
-  border-radius: 7px;
   flex: none;
-  box-shadow: 0 0 24px rgba(99,102,241,0.30);
+  object-fit: contain;
 }
 .rf-wordmark-icon-sm {
   width: 24px; height: 24px;
-  border-radius: 6px;
 }
 .rf-wordmark-text {
   font-weight: 600; font-size: 18px; letter-spacing: -0.02em; line-height: 1;
