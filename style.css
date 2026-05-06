@@ -297,6 +297,9 @@ a { color: inherit; }
 }
 
 /* ─── Store badges (official Google Play + Apple App Store) ────────────── */
+/* Equal-sized button boxes, badge artwork centered inside. Native aspect
+   ratios differ (Apple ~3:1, Google ~2.6:1), so equal height alone leaves
+   widths mismatched. Fixed box keeps the pair visually balanced. */
 .rf-store-badge {
   display: inline-block;
   text-decoration: none;
@@ -309,8 +312,8 @@ a { color: inherit; }
 }
 .rf-store-badge img {
   display: block;
-  height: 50px;
-  width: auto;
+  width: 160px;
+  height: auto;
 }
 
 /* ─── How it works ────────────────────────────────────────────────────── */
